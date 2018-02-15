@@ -1,9 +1,10 @@
 #include <iostream>
-#include <GL/freeglut.h>
+
 using namespace std;
 
-int main(int c, char** v)
+int main()
 {
+    cout << "Hello World!" << endl;
     return 0;
 }
 
