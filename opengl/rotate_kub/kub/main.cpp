@@ -1,10 +1,10 @@
 #include <iostream>
-
+#include <GL/freeglut.h>
 using namespace std;
 
-int main()
+int main(int argc, char** argv)
 {
-    cout << "Hello World!" << endl;
+    glutInit(&argc, argv);
     return 0;
 }
 
