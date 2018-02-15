@@ -2,6 +2,8 @@
 #include <GL/freeglut.h>
 using namespace std;
 
+//-----------------------------------------------------------------------------------
+
 struct Setings
 {
     enum{
@@ -10,6 +12,12 @@ struct Setings
         ALPHA  = 600
     };
 } set;
+
+//-----------------------------------------------------------------------------------
+void display();
+
+void time(int);
+//-----------------------------------------------------------------------------------
 
 int main(int argc, char** argv)
 {
@@ -22,11 +30,22 @@ int main(int argc, char** argv)
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(-1, 1, -1, 1, -1, 1);
-
     glClearColor(0, 0, 0, 0);
 
+    glutDisplayFunc(display);
     glutMainLoop();
 
     return 0;
 }
 
+//-----------------------------------------------------------------------------------
+void display()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+
+
+
+    glutSwapBuffers();
+}
+
+//-----------------------------------------------------------------------------------
